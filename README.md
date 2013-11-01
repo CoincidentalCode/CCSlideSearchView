@@ -8,14 +8,27 @@ It lets users swipe down a vertical list of characters (similar to the Contacts 
 Requirements
 --------
 • iOS 4.3 and higher
+
 • ARC
+
+
+Screenshots
+-------
+
+![Screenshot1](http://coincidentalcode.com/images/ccscreenshot1.png)
+![Screenshot2](http://coincidentalcode.com/images/ccscreenshot2.png)
+
 
 Implementation
 -------
 • Add the `CCSlideSearchView.{h,m}` files to your XCode project.
+
 • Include `#import "CCSlideSearchView.h"` to the header of a file using the view.
+
 • Initialize with `[[CCSlideSearchView alloc] initWithFrame:(CGRect)frame]`
+
 • Then set the `CCSlideSearchViewDelegate` (recommended), and add to your superview
+
 
 Delegation
 -------
@@ -42,23 +55,26 @@ Called when the user has stopped interacting with the view, and returns the sear
 Customization
 -------
 **Setting character limits**
-Limit how many characters the user can select in a given search
+
 Set the `characterLimit` (int) property of the view
 
 **Showing the current search term**
-By default, it shows the term being searched
-To disable, set property `highlightsWhileSearching = FALSE`
+
+To disable, set property `highlightsWhileSearching = NO`
 
 **Changing UI and color**
-Edit the background color and the text colors
-Change the `highlighter.png` image to change background image
-Text color and attributes are defined by macros in the .m file
+
+Change the `highlighter.png` image to change background image. Text color and attributes are defined by macros in the .m file
+
 
 Author
 -------
 Tom Bachant
-(sobrioapp.com)
-(coincidentalcode.com)
+
+Sobrioapp.com
+
+Coincidentalcode.com
+
 
 License
 -------
