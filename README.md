@@ -12,24 +12,32 @@ Requirements
 
 Implementation
 -------
-Add the `CCSlideSearchView.{h,m}` files to your XCode project.
-Include `#import "CCSlideSearchView.h"` to the header of a file using the view.
-Initialize with `[[CCSlideSearchView alloc] initWithFrame:(CGRect)frame]`
-Then set the `CCSlideSearchViewDelegate` (recommended), and add to your superview
+• Add the `CCSlideSearchView.{h,m}` files to your XCode project.
+• Include `#import "CCSlideSearchView.h"` to the header of a file using the view.
+• Initialize with `[[CCSlideSearchView alloc] initWithFrame:(CGRect)frame]`
+• Then set the `CCSlideSearchViewDelegate` (recommended), and add to your superview
 
 Delegation
 -------
 `- (void)slideSearchDidBegin:(CCSlideSearchView *)searchView;`
+
 Called when user first interacts with the view
 
+
 `- (void)slideSearch:(CCSlideSearchView *)searchView didHoverLetter:(NSString *)letter atIndex:(NSInteger)index withSearchTerm:(NSString *)term;`
+
 Called when the user is hovering vertically over the list of letters
 
+
 `- (void)slideSearch:(CCSlideSearchView *)searchView didConfirmLetter:(NSString *)letter atIndex:(NSInteger)index withSearchTerm:(NSString *)term;`
+
 Called when the user swipes left to select a letter and add it to the current search term
 
+
 `- (void)slideSearch:(CCSlideSearchView *)searchView didFinishSearchWithTerm:(NSString *)term;`
+
 Called when the user has stopped interacting with the view, and returns the search term chosen by the user
+
 
 Customization
 -------
